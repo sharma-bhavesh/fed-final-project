@@ -6,7 +6,7 @@ $visual-grid:true;
 $grid-columns:12;
 
 // breakpoint
-$tablet: new-breakpoint(min-width 796px);
+$tablet: new-breakpoint(min-width 768px);
 
 @import '../../bower_components/bourbon/dist/_bourbon.scss';
 @import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
@@ -38,11 +38,22 @@ main {
   Module Styles
 ******************************************************************************/
 
+
+
 .company-logo{
+
 	width: 40px;
 	height: 40px;
 
+	// TODO, does not work
 	@include media($tablet) {
+		width: 80px;
+		height: 80px;
+	}
+}
+
+@media screen and (min-width:768px) {
+	.company-logo {
 		width: 80px;
 		height: 80px;
 	}
