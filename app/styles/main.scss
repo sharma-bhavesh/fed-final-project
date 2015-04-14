@@ -2,7 +2,7 @@
   final-project
 ******************************************************************************/
 
-$visual-grid:true;
+$visual-grid:false;
 $grid-columns:12;
 
 // breakpoint
@@ -27,6 +27,7 @@ main {
 	@include outer-container;
 }
 
+
 /*****************************************************************************
   Layout Styles
 ******************************************************************************/
@@ -37,7 +38,6 @@ main {
 /*****************************************************************************
   Module Styles
 ******************************************************************************/
-
 
 
 .company-logo{
@@ -52,6 +52,16 @@ main {
 	}
 }
 
+// hack, issue with menu button sticking to the right wall (bootstrap!!)
+.navbar-right {
+	margin-right : 0px;
+}
+
+.form-group{
+	@include span-columns(11);	
+}
+
+
 @media screen and (min-width:768px) {
 	.company-logo {
 		width: 80px;
@@ -59,6 +69,3 @@ main {
 	}
 }
 
-.navbar-right {
-	margin-right : 0px;
-}
